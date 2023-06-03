@@ -18,3 +18,10 @@ console.log(
   upper`Hello ${userName} (${twitter}), welcome to ${topic}
 `
 );
+
+const longString = `                            Hello ${userName} (${twitter}), welcome to ${topic}                               `;
+
+console.log(longString);
+
+console.log(longString.trimEnd());
+console.log(longString.trim());
