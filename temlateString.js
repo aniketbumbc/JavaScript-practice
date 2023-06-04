@@ -2,22 +2,21 @@ const userName = 'Aniket';
 const twitter = 'andjak78';
 const topic = 'react JS';
 
-function upper(strings, ...values) {
-  let upperCase;
-  for (let i = 0; i < strings.length; i++) {
-    if (i > 0) {
-      upperCase += String(values[i - 1]).toUpperCase();
-    }
-    upperCase += strings[i];
+function upper(static, ...dynamic) {
+  dynamic.forEach((value, index) => {
+    dynamic[index] = value.toUpperCase();
+  });
+
+  let str = static[0];
+
+  for (let i = 0; i < dynamic.length; i++) {
+    str += dynamic[i] + static[i + 1];
   }
 
-  return upperCase;
+  console.log(str);
 }
 
-console.log(
-  upper`Hello ${userName} (${twitter}), welcome to ${topic}
-`
-);
+console.log(upper`Hello ${userName} (${twitter}), welcome to ${topic}`);
 
 const longString = `                            Hello ${userName} (${twitter}), welcome to ${topic}                               `;
 
