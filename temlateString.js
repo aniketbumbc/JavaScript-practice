@@ -49,6 +49,37 @@ console.log('First', firstOld, 'and Second', secondOld);
  *  Declarative approch
  */
 
-const [first, second, third, forth, fifth, six] = data();
+const amount = data();
 
-console.log(first, second, third, forth, fifth, six);
+const tempArray = [];
+
+tempArray[0] = amount[0];
+tempArray[2] = amount[1];
+tempArray[10] = amount[2];
+tempArray[50] = amount[3];
+
+// console.log(tempArray[49]);
+
+/**
+ *  Swap values between variables
+ */
+
+let a = 10;
+let b = 20;
+
+[a, b] = [b, a];
+
+console.log(a, b);
+
+/**
+ * Object destructring
+ *
+ */
+
+function objData() {
+  return { a: 1, b: 3, c: 5 };
+}
+
+const { a: objFrist, b: objSecond } = objData();
+
+console.log(objFrist, objSecond);
