@@ -97,3 +97,13 @@ function lookupRecord({ store = null, id = null }) {
 lookupRecord({ id: 300, store: 'person-record' });
 
 lookupRecord({ id: 600, store: 'Record-600' });
+
+/***
+ *  Find Index
+ * Find
+ */
+
+const testArray = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(testArray.findIndex((ele) => ele >= 6));
+console.log(testArray.find((ele) => ele > 6));
