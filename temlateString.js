@@ -43,7 +43,7 @@ var temp = data();
 const firstOld = temp[0];
 const secondOld = temp[1];
 
-console.log('First', firstOld, 'and Second', secondOld);
+// console.log('First', firstOld, 'and Second', secondOld);
 
 /**
  *  Declarative approch
@@ -69,7 +69,7 @@ let b = 20;
 
 [a, b] = [b, a];
 
-console.log(a, b);
+// console.log(a, b);
 
 /**
  * Object destructring
@@ -82,4 +82,18 @@ function objData() {
 
 const { a: objFrist, b: objSecond } = objData();
 
-console.log(objFrist, objSecond);
+//console.log(objFrist, objSecond);
+
+// Name argument
+function lookupRecord({ store = null, id = null }) {
+  if (store && id) {
+    console.log(store);
+    console.log(id);
+  } else {
+    console.log('Something is missing');
+  }
+}
+
+lookupRecord({ id: 300, store: 'person-record' });
+
+lookupRecord({ id: 600, store: 'Record-600' });
