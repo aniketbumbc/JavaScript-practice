@@ -100,7 +100,7 @@ lookupRecord({ id: 600, store: 'Record-600' });
 
 /***
  *  Find Index
- * Find
+ * Find in array
  */
 
 const testArray = [1, 2, 3, 4, 5, 6, 7];
