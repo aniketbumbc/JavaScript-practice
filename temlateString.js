@@ -99,8 +99,8 @@ lookupRecord({ id: 300, store: 'person-record' });
 lookupRecord({ id: 600, store: 'Record-600' });
 
 /***
- *  Find Index
- * Find in array
+ *  Find Index and  Find in array
+ *
  */
 
 const testArray = [1, 2, 3, 4, 5, 6, 7];
